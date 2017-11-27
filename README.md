@@ -83,4 +83,4 @@
 这个里面还有很多没有优化，一些东西也没有改，等后面有时间了再来修改吧。:-)
 先写这么多吧。
 嗯，一定要好好锻炼，好好减肥！
-这个是[工程地址](https://coding.net/u/BanMing/p/TextEmoji/git)。
+这个是[博客地址](http://www.jianshu.com/p/61fa7a70ead7)。
