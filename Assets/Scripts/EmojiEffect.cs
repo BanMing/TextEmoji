@@ -43,6 +43,11 @@ public class EmojiEffect : BaseMeshEffect
         for (int i = 0; i < emojiItemList.Count; i++)
         {
             var emojiIndex = emojiItemList[i].pos;
+            var index = Mathf.Clamp(emojiIndex * 6 - 4, 2, int.MaxValue);
+            //取消被截断的文字显示emoji
+            if(index>vertexList.Count){
+                break;
+            }
             Transform emojiTrans;
             if (i > childEmojiTransList.Count - 1)
             {
@@ -52,8 +57,7 @@ public class EmojiEffect : BaseMeshEffect
             {
                 emojiTrans = childEmojiTransList[i];
             }
-            emojiTrans.gameObject.SetActive(true);
-            var index = Mathf.Clamp(emojiIndex * 6 - 4, 2, int.MaxValue);
+            emojiTrans.gameObject.SetActive(true);           
             var imagePos = new Vector3(vertexList[index].position.x, vertexList[index].position.y, 0);
             emojiTrans.localPosition = imagePos;
 
